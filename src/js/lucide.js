@@ -1,0 +1,36 @@
+import {
+	createIcons,
+	TrendingUp,
+	Zap,
+	Sparkles,
+	Box,
+	Gift,
+	Home,
+	BookOpen,
+	Users,
+	Trophy,
+	Target,
+	ArrowRight,
+	Coffee,
+	Code,
+	Play,
+} from 'lucide';
+
+createIcons({
+	icons: {
+		TrendingUp,
+		Zap,
+		Sparkles,
+		Box,
+		Gift,
+		Home,
+		BookOpen,
+		Users,
+		Trophy,
+		Target,
+		ArrowRight,
+		Coffee,
+		Code,
+		Play,
+	},
+});
