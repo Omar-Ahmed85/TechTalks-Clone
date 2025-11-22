@@ -14,6 +14,10 @@ import {
 	Coffee,
 	Code,
 	Play,
+	Linkedin,
+	SlidersHorizontal,
+	Instagram,
+	Mail,
 } from 'lucide';
 
 createIcons({
@@ -32,5 +36,9 @@ createIcons({
 		Coffee,
 		Code,
 		Play,
+		Linkedin,
+		SlidersHorizontal,
+		Instagram,
+		Mail,
 	},
 });
