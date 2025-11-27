@@ -18,6 +18,9 @@ import {
 	SlidersHorizontal,
 	Instagram,
 	Mail,
+	Award,
+	GraduationCap,
+	Search,
 } from 'lucide';
 
 createIcons({
@@ -40,5 +43,8 @@ createIcons({
 		SlidersHorizontal,
 		Instagram,
 		Mail,
+		Award,
+		GraduationCap,
+		Search,
 	},
 });
