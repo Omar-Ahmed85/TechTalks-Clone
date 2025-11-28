@@ -21,6 +21,7 @@ import {
 	Award,
 	GraduationCap,
 	Search,
+	Menu,
 } from 'lucide';
 
 createIcons({
@@ -46,5 +47,6 @@ createIcons({
 		Award,
 		GraduationCap,
 		Search,
+		Menu,
 	},
 });
