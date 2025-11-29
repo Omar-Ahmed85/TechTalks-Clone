@@ -10,8 +10,6 @@ import {
 	Users,
 	Trophy,
 	Target,
-	ArrowRight,
-	Coffee,
 	Code,
 	Play,
 	Linkedin,
@@ -22,6 +20,7 @@ import {
 	GraduationCap,
 	Search,
 	Menu,
+	ChevronRight,
 } from 'lucide';
 
 createIcons({
@@ -36,8 +35,6 @@ createIcons({
 		Users,
 		Trophy,
 		Target,
-		ArrowRight,
-		Coffee,
 		Code,
 		Play,
 		Linkedin,
@@ -48,5 +45,6 @@ createIcons({
 		GraduationCap,
 		Search,
 		Menu,
+		ChevronRight,
 	},
 });

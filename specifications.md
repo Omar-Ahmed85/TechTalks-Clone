@@ -10,42 +10,44 @@ scratch.
 
 Based on usage analysis, the website primarily uses these colors (in OKLCH format):
 
-### Text Colors (Most Frequent)
+### Custom Colors
 
--   **Almost Black**: `oklch(0.027 0 0)` - Primary text (used 323 times)
--   **White**: `oklch(1 0 0)` - Light text and backgrounds (used 159 times)
+> [!NOTE]
+> Standard colors like white `oklch(1 0 0)` and black `oklch(0 0 0)` are universal.
+> The website also uses **TailwindCSS standard colors**:
+>
+> -   `purple-400`: `oklch(0.714 0.203 305.504)` (brand purple)
+> -   `cyan-400`: `oklch(0.789 0.154 211.53)` (brand blue)
+
+#### Text Colors
+
 -   **Blue Accent**: `oklch(0.665 0.057 255.5)` - Links and accents (51 uses)
 -   **Light Gray**: `oklch(0.672 0.008 261.3)` - Secondary text (51 uses)
--   **Primary Blue**: `oklch(0.789 0.154 211.53)` - Brand blue (33 uses)
--   **Brand Purple**: `oklch(0.714 0.203 305.504)` - Brand purple (16 uses)
 -   **Cyan Accent**: `oklch(0.891 0.182 195.5)` - Highlighting (5 uses)
 
-### Background Colors
+#### Background Colors
 
 -   **Dark Surface**: `oklch(0.13 0.005 256.8)` - Primary dark background (48 uses)
 -   **Dark Overlay**: `oklch(0.21 0.003 264.7 / 0.5)` - Semi-transparent dark (8 uses)
--   **Pure Black**: `oklch(0 0 0)` - Deep backgrounds (8 uses)
 -   **Transparent Black**: `oklch(0 0 0 / 0.4)` to `oklch(0 0 0 / 0.5)` - Overlays
 
 ### CSS Custom Properties
 
 ```css
 :root {
-	/* Text Colors */
-	--text-primary: oklch(0.027 0 0);
-	--text-white: oklch(1 0 0);
+	/* Custom Text Colors */
 	--text-blue: oklch(0.665 0.057 255.5);
 	--text-gray: oklch(0.672 0.008 261.3);
-
-	/* Brand Colors */
-	--brand-blue: oklch(0.789 0.154 211.53);
-	--brand-purple: oklch(0.714 0.203 305.504);
 	--accent-cyan: oklch(0.891 0.182 195.5);
 
-	/* Backgrounds */
+	/* Custom Backgrounds */
 	--bg-dark: oklch(0.13 0.005 256.8);
-	--bg-black: oklch(0 0 0);
+	--bg-overlay-dark: oklch(0.21 0.003 264.7 / 0.5);
 	--bg-overlay: oklch(0 0 0 / 0.5);
+
+	/* Note: Website also uses TailwindCSS standard colors */
+	/* purple-400: oklch(0.714 0.203 305.504) */
+	/* cyan-400: oklch(0.789 0.154 211.53) */
 }
 ```
 
@@ -53,7 +55,10 @@ Based on usage analysis, the website primarily uses these colors (in OKLCH forma
 
 ## 🎭 Core Gradients
 
-The website uses primarily **purple-to-blue gradients**. Here are the most frequent:
+The website uses primarily **purple-to-blue gradients** using TailwindCSS standard colors combined with custom colors:
+
+> [!IMPORTANT]
+> Gradients use **TailwindCSS `purple-400`** and **`cyan-400`** as base colors.
 
 ### Primary Brand Gradient (Used 24 times)
 
@@ -61,31 +66,31 @@ The website uses primarily **purple-to-blue gradients**. Here are the most frequ
 /* Three-color brand gradient - MOST USED */
 linear-gradient(
   to right,
-  oklch(0.714 0.203 305.504) 0%,   /* Purple */
-  oklch(0.789 0.154 211.53) 50%,    /* Blue */
-  oklch(0.665 0.057 255.5) 100%     /* Blue-Purple */
+  oklch(0.714 0.203 305.504) 0%,   /* TW purple-400 */
+  oklch(0.789 0.154 211.53) 50%,    /* TW cyan-400 */
+  oklch(0.665 0.057 255.5) 100%     /* Custom blue accent */
 )
 ```
 
 ### Two-Color Brand Gradient (Used 10 times)
 
 ```css
-/* Purple to Blue */
+/* Purple to Cyan - using TailwindCSS colors */
 linear-gradient(
   to right,
-  oklch(0.714 0.203 305.504) 0%,
-  oklch(0.789 0.154 211.53) 100%
+  oklch(0.714 0.203 305.504) 0%,    /* TW purple-400 */
+  oklch(0.789 0.154 211.53) 100%    /* TW cyan-400 */
 )
 ```
 
 ### Utility Gradients (Used 5 times each)
 
 ```css
-/* Transparent Purple to Blue - for overlays */
+/* Transparent Purple to Cyan - for overlays (using TW colors) */
 linear-gradient(
   to right bottom,
-  oklch(0.714 0.203 305.504 / 0.2) 0%,
-  oklch(0.789 0.154 211.53 / 0.2) 100%
+  oklch(0.714 0.203 305.504 / 0.2) 0%,  /* TW purple-400 @ 20% */
+  oklch(0.789 0.154 211.53 / 0.2) 100%  /* TW cyan-400 @ 20% */
 )
 
 /* Black fade - for edge masks */
@@ -382,33 +387,27 @@ Small, quick animations that provide tactile feedback.
 
 ```css
 :root {
-	/* Text Colors */
-	--text-primary: oklch(0.027 0 0);
-	--text-white: oklch(1 0 0);
+	/* Custom Text Colors (non-TailwindCSS) */
 	--text-blue: oklch(0.665 0.057 255.5);
 	--text-gray: oklch(0.672 0.008 261.3);
-
-	/* Brand Colors */
-	--brand-blue: oklch(0.789 0.154 211.53);
-	--brand-purple: oklch(0.714 0.203 305.504);
 	--accent-cyan: oklch(0.891 0.182 195.5);
 
-	/* Backgrounds */
+	/* Custom Backgrounds */
 	--bg-dark: oklch(0.13 0.005 256.8);
-	--bg-black: oklch(0 0 0);
+	--bg-overlay-dark: oklch(0.21 0.003 264.7 / 0.5);
 	--bg-overlay: oklch(0 0 0 / 0.5);
 
-	/* Gradients */
+	/* Gradients (using TailwindCSS purple-400 and cyan-400) */
 	--gradient-brand: linear-gradient(
 		to right,
 		oklch(0.714 0.203 305.504),
-		oklch(0.789 0.154 211.53)
+		/* TW purple-400 */ oklch(0.789 0.154 211.53) /* TW cyan-400 */
 	);
 	--gradient-brand-triple: linear-gradient(
 		to right,
 		oklch(0.714 0.203 305.504) 0%,
-		oklch(0.789 0.154 211.53) 50%,
-		oklch(0.665 0.057 255.5) 100%
+		/* TW purple-400 */ oklch(0.789 0.154 211.53) 50%,
+		/* TW cyan-400 */ oklch(0.665 0.057 255.5) 100% /* Custom blue */
 	);
 
 	/* Border Radius */

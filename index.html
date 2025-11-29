@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="overflow-x-hidden" lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,219 +7,370 @@
 			TechTalks - Learn. Build. Grow. | Your programming platform
 		</title>
 		<link rel="icon" href="./favicon.ico" />
+		<link rel="stylesheet" href="./src/styles/main.css" />
 	</head>
-	<body>
+	<body class="bg-black w-full">
 		<!-- Header Section -->
-		<header>
-			<nav>
-				<a href="/">
+		<header
+			class="flex flex-col justify-center items-center text-white w-full z-50 py-5"
+		>
+			<nav
+				class="flex justify-between items-center w-full max-w-7xl mx-auto p-4 main:pt-4 main:pb-0 main:px-6"
+			>
+				<a
+					class="flex justify-center items-center gap-1 font-bold italic text-xl"
+					href="/"
+				>
 					<img
+						class="size-12.5 pointer-events-none"
 						src="./src/assets/images/logo.avif"
 						alt="TechTalks Logo"
 					/>
 					<h1>TechTalks</h1>
 				</a>
-				<ul>
+				<ul class="hidden main:flex space-x-6 text-sm font-medium">
 					<li>
-						<a href="/">
-							<i data-lucide="home"></i>
+						<a
+							class="navigation-link text-custom-cyan pb-0.5 border-b-2 border-custom-cyan"
+							href="/"
+						>
+							<i
+								class="size-4 pointer-events-none"
+								data-lucide="home"
+							></i>
 							<span>Home</span>
 						</a>
 					</li>
 					<li>
-						<a href="#courses">
-							<i data-lucide="book-open"></i>
+						<a class="navigation-link" href="#courses">
+							<i
+								class="size-4 pointer-events-none"
+								data-lucide="book-open"
+							></i>
 							<span>Courses</span>
 						</a>
 					</li>
 					<li>
-						<a href="#about">
-							<i data-lucide="users"></i>
+						<a class="navigation-link" href="#about">
+							<i
+								class="size-4 pointer-events-none"
+								data-lucide="users"
+							></i>
 							<span>About TechTalks</span>
 						</a>
 					</li>
 					<li>
-						<a href="#champions">
-							<i data-lucide="trophy"></i>
+						<a class="navigation-link" href="#champions">
+							<i
+								class="size-4 pointer-events-none"
+								data-lucide="trophy"
+							></i>
 							<span>Champions</span>
 						</a>
 					</li>
 					<li>
-						<a href="#devbounty">
-							<i data-lucide="target"></i>
+						<a class="navigation-link" href="#devbounty">
+							<i
+								class="size-4 pointer-events-none"
+								data-lucide="target"
+							></i>
 							<span>DevBounty</span>
 						</a>
 					</li>
 				</ul>
-				<a href="#courses">Start Learning</a>
-				<button id="menu-button">
-					<i data-lucide="menu"></i>
+				<a
+					class="hidden main:inline-block rounded-md transition bg-custom-blue hover:bg-custom-dark-blue font-semibold text-sm px-4 py-2 shadow-custom-blue/50 shadow-md"
+					href="#courses"
+					>Start Learning</a
+				>
+				<button
+					class="relative inline-flex justify-center items-center cursor-pointer main:hidden"
+					id="menu-button"
+				>
+					<i class="pointer-events-none" data-lucide="menu"></i>
+					<div class="absolute size-12 pointer-fine:hidden"></div>
 				</button>
 			</nav>
 
 			<!-- Mobile Menu -->
-			<div>
-				<ul>
+			<div
+				class="w-full px-6 pt-4 pb-6 text-sm font-medium hidden"
+				id="mobile-menu"
+			>
+				<ul class="flex flex-col gap-y-4 w-full">
 					<li>
-						<a href="/">
-							<i data-lucide="home"></i>
+						<a class="navigation-link text-custom-cyan" href="/">
+							<i
+								class="size-4 pointer-events-none"
+								data-lucide="home"
+							></i>
 							<span>Home</span>
 						</a>
 					</li>
 					<li>
-						<a href="#courses">
-							<i data-lucide="book-open"></i>
+						<a class="navigation-link" href="#courses">
+							<i
+								class="size-4 pointer-events-none"
+								data-lucide="book-open"
+							></i>
 							<span>Courses</span>
 						</a>
 					</li>
 					<li>
-						<a href="#about">
-							<i data-lucide="users"></i>
+						<a class="navigation-link" href="#about">
+							<i
+								class="size-4 pointer-events-none"
+								data-lucide="users"
+							></i>
 							<span>About TechTalks</span>
 						</a>
 					</li>
 					<li>
-						<a href="#champions">
-							<i data-lucide="trophy"></i>
+						<a class="navigation-link" href="#champions">
+							<i
+								class="size-4 pointer-events-none"
+								data-lucide="trophy"
+							></i>
 							<span>Champions</span>
 						</a>
 					</li>
 					<li>
-						<a href="#devbounty">
-							<i data-lucide="target"></i>
+						<a class="navigation-link" href="#devbounty">
+							<i
+								class="size-4 pointer-events-none"
+								data-lucide="target"
+							></i>
 							<span>DevBounty</span>
 						</a>
 					</li>
 					<li>
-						<a href="#courses">Start Learning</a>
+						<a
+							class="flex justify-center items-center rounded-md bg-custom-blue hover:bg-custom-dark-blue transition shadow-custom-blue/50 shadow-md text-center px-4 py-2"
+							href="#courses"
+							>Start Learning</a
+						>
 					</li>
 				</ul>
 			</div>
 		</header>
 
-		<main>
+		<main class="lg:px-10 lg:pt-11.5 max-w-full">
 			<!-- Hero Section -->
-			<section>
-				<div>
-					<span>Built by devs, for devs</span>
-					<h1>Lebanon's <span>biggest tech community</span></h1>
-					<p>
+			<section
+				class="grid lg:grid-cols-2 gap-12 items-center px-6 pt-8 pb-16 min-h-[calc(100vh-10rem)] mx-auto"
+			>
+				<div class="flex justify-center flex-col gap-y-8 text-white">
+					<span
+						class="uppercase text-cyan-400 text-sm font-medium tracking-widest"
+						>Built by devs, for devs</span
+					>
+					<h1
+						class="text-5xl lg:text-7xl font-bold text-white leading-tight capitalize"
+					>
+						Lebanon's
+						<span
+							class="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-cyan-400"
+							>biggest tech community</span
+						>
+					</h1>
+					<p class="text-xl text-gray-300 leading-relaxed max-w-2xl">
 						Code smarter, not harder → with the right path and the
 						right people.
 					</p>
 
-					<div>
-						<a href="#courses">
-							<i data-lucide="book-open"></i>
+					<div class="flex flex-col sm:flex-row gap-4 pt-4">
+						<a
+							class="flex justify-center items-center gap-2 group bg-linear-to-r from-blue-500 to-cyan-400 px-8 py-4.5 rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+							href="#courses"
+						>
+							<i class="size-5" data-lucide="book-open"></i>
 							<span>Explore Courses</span>
-							<i data-lucide="arrow-right"></i>
+							<i
+								class="size-4.5 group-hover:translate-x-1 transition-transform"
+								data-lucide="chevron-right"
+							></i>
 						</a>
-						<button>
-							<i data-lucide="users"></i>
+						<a
+							class="flex justify-center items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
+							href="#community"
+						>
+							<i class="size-5" data-lucide="users"></i>
 							<span>Join Community</span>
-						</button>
+						</a>
 					</div>
 
-					<div>
-						<span>Trusted by 5000+ developers in Lebanon</span>
-						<div>
-							<div>
-								<div>
-									<i data-lucide="coffee"></i>
+					<div class="flex flex-col pt-8 gap-y-4">
+						<span class="text-gray-400 text-sm"
+							>Trusted by 5,000+ developers in Lebanon</span
+						>
+						<div class="flex items-center gap-x-6">
+							<div class="flex items-center gap-x-2">
+								<div
+									class="size-8 bg-linear-to-r from-green-500 to-teal-500 rounded-full flex justify-center items-center"
+								>
+									<img
+										class="size-4"
+										src="./src/assets/icons/coffee-icon.svg"
+										alt="Coffee Icon"
+									/>
 								</div>
-								<span>Coffee</span>
+								<span class="text-gray-300 text-sm"
+									>Coffee</span
+								>
 							</div>
-							<div>
-								<div>
-									<i data-lucide="code"></i>
+							<div class="flex items-center gap-x-2">
+								<div
+									class="size-8 bg-linear-to-r from-orange-500 to-red-500 rounded-full flex justify-center items-center"
+								>
+									<i class="size-4" data-lucide="code"></i>
 								</div>
-								<span>Code</span>
+								<span class="text-gray-300 text-sm">Code</span>
 							</div>
-							<div>
-								<div>
-									<i data-lucide="play"></i>
+							<div class="flex items-center gap-x-2">
+								<div
+									class="size-8 bg-linear-to-r from-blue-500 to-purple-500 rounded-full flex justify-center items-center"
+								>
+									<i class="size-4" data-lucide="play"></i>
 								</div>
-								<span>Enjoy</span>
+								<span class="text-gray-300 text-sm">Enjoy</span>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div>
-					<div>
-						<div>
+				<div
+					class="flex justify-center items-center w-full px-4 md:px-10 -mt-2 lg:-mt-20"
+				>
+					<div
+						class="relative rotate-3d transition-transform duration-500 w-full"
+					>
+						<div
+							class="bg-linear-to-br from-gray-800 to-gray-900 rounded-lg p-4 shadow-2xl border border-gray-700"
+						>
 							<!-- Code Snippet -->
-							<div>
+							<div class="bg-black rounded-lg p-4 mb-4">
 								<!-- Controls -->
-								<div>
-									<div></div>
-									<div></div>
-									<div></div>
+								<div class="flex items-center gap-x-2 mb-4">
+									<div
+										class="size-3 bg-red-500 rounded-full"
+									></div>
+									<div
+										class="size-3 bg-yellow-500 rounded-full"
+									></div>
+									<div
+										class="size-3 bg-green-500 rounded-full"
+									></div>
 								</div>
 								<!-- Code -->
-								<div>
+								<div class="flex flex-col gap-y-2 text-sm">
 									<!-- Line 1 -->
-									<div>
-										<span>function</span>
-										<span>learnProgramming</span>
-										<span>() {</span>
+									<div class="flex items-center gap-2">
+										<span class="text-purple-400"
+											>function</span
+										>
+										<span class="text-cyan-400"
+											>learnProgramming</span
+										>
+										<span class="text-gray-300">() {</span>
 									</div>
 									<!-- Lines 2 & 3 -->
-									<div>
-										<div>
-											<span>const</span>
-											<span>skills</span>
-											<span>=</span>
-											<span
+									<div class="flex flex-col pl-4 gap-y-1">
+										<div class="flex items-center gap-2">
+											<span class="text-gray-400"
+												>const</span
+											>
+											<span class="text-cyan-400"
+												>skills</span
+											>
+											<span class="text-gray-300">=</span>
+											<span class="text-green-400"
 												>['React', 'Node.js',
 												'Python']</span
 											>
 										</div>
-										<div>
-											<span>return</span>
-											<span>buildYourFuture</span>
-											<span>(skills)</span>
+										<div class="flex items-center gap-2">
+											<span class="text-purple-400"
+												>return</span
+											>
+											<span class="text-cyan-400"
+												>buildYourFuture</span
+											>
+											<span class="text-gray-300"
+												>(skills)</span
+											>
 										</div>
 									</div>
 									<!-- Line 4 -->
-									<div>}</div>
+									<div class="text-gray-300">}</div>
 								</div>
 							</div>
 
 							<!-- Courses -->
-							<div>
+							<div class="flex flex-col gap-y-3">
 								<!-- 1 -->
-								<div>
-									<div>
-										<div></div>
-										<div>
-											<strong>React Fundamentals</strong>
-											<span>85% Complete</span>
+								<div
+									class="flex justify-between items-center p-3 bg-gray-800 rounded-lg"
+								>
+									<div
+										class="flex justify-center items-center gap-x-3"
+									>
+										<div
+											class="size-8 bg-linear-to-r from-purple-500 to-cyan-500 rounded-full"
+										></div>
+										<div class="flex flex-col">
+											<span
+												class="text-white text-sm font-medium"
+												>React Fundamentals</span
+											>
+											<span class="text-gray-400 text-xs"
+												>85% Complete</span
+											>
 										</div>
 									</div>
-									<div>
-										<div></div>
+									<div
+										class="w-12 h-2 bg-gray-700 rounded-full overflow-hidden"
+									>
+										<div
+											class="w-10 h-full bg-linear-to-r from-purple-500 to-cyan-500 rounded-full"
+										></div>
 									</div>
 								</div>
 
 								<!-- 2 -->
-								<div>
-									<div>
-										<div></div>
-										<div>
-											<strong>Node.js Mastery</strong>
-											<span>Next Course</span>
+								<div
+									class="flex justify-between items-center p-3 bg-gray-800 rounded-lg"
+								>
+									<div
+										class="flex justify-center items-center gap-x-3"
+									>
+										<div
+											class="size-8 bg-linear-to-r from-blue-500 to-purple-500 rounded-full"
+										></div>
+										<div class="flex flex-col">
+											<span
+												class="text-white text-sm font-medium"
+												>Node.js Mastery</span
+											>
+											<span class="text-gray-400 text-xs"
+												>Next Course</span
+											>
 										</div>
 									</div>
-									<span>Start</span>
+									<span class="text-cyan-400 text-sm"
+										>Start</span
+									>
 								</div>
 							</div>
 						</div>
-						<div>
-							<i data-lucide="code"></i>
+						<div
+							class="flex justify-center items-center absolute -top-6 -right-6 size-12 bg-linear-to-r from-cyan-500 to-blue-500 rounded-full animate-bounce text-white"
+						>
+							<i class="size-5" data-lucide="code"></i>
 						</div>
-						<div>
-							<i data-lucide="play"></i>
+						<div
+							class="flex justify-center items-center absolute -bottom-4 -left-4 size-16 bg-linear-to-r from-purple-500 to-pink-500 rounded-full animate-pulse text-white"
+						>
+							<i class="size-6" data-lucide="play"></i>
 						</div>
 					</div>
 				</div>

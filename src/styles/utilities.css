@@ -1,0 +1,7 @@
+@utility navigation-link {
+    @apply inline-flex justify-center items-center gap-x-1 hover:text-custom-cyan transition-colors;
+}
+
+@utility rotate-3d {
+    transform: perspective(1000px) rotateX(5deg) rotateY(-15deg) rotateZ(1deg);
+}
