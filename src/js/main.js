@@ -1,2 +1,2 @@
 import './lucide.js';
-import './swiper-init.js';
+import './splide-init.js';
