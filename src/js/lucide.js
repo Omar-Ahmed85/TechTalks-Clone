@@ -21,6 +21,8 @@ import {
 	Search,
 	Menu,
 	ChevronRight,
+	Star,
+	Clock
 } from 'lucide';
 
 createIcons({
@@ -46,5 +48,7 @@ createIcons({
 		Search,
 		Menu,
 		ChevronRight,
+		Star,
+		Clock
 	},
 });

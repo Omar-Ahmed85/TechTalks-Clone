@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './utilities.css';
+@import './footer.css';
 
 @theme {
 	/* === Colors === */
@@ -8,9 +9,9 @@
 	--color-bg-dark: oklch(0.13 0.005 256.8);
 	--color-bg-overlay-dark: oklch(0.21 0.003 264.7 / 0.5);
 	--color-bg-overlay: oklch(0 0 0 / 0.5);
-    --color-custom-cyan: oklch(0.8442 0.145654 209.2851);
-    --color-custom-blue: oklch(0.6061 0.214 260.38);
-    --color-custom-dark-blue: oklch(0.4671 0.1608 260.34);
+	--color-custom-cyan: oklch(0.8442 0.145654 209.2851);
+	--color-custom-blue: oklch(0.6061 0.214 260.38);
+	--color-custom-dark-blue: oklch(0.4671 0.1608 260.34);
 
 	/* === Fonts === */
 	--font-sans-serif: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
@@ -23,6 +24,6 @@
 	--radius-lg: 0.625rem;
 	--radius-xl: 1rem;
 
-    /* === Breakpoints === */
-    --breakpoint-main: 900px;
+	/* === Breakpoints === */
+	--breakpoint-main: 900px;
 }
