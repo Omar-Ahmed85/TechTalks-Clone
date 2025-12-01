@@ -1,4 +1,5 @@
-import courses from './courses.js';
+﻿import courses from './courses.js';
+import { createIcons, iconsConfig } from './lucide.js';
 
 // Function to create a course card
 function createCourseCard(course) {
@@ -10,7 +11,7 @@ function createCourseCard(course) {
 	const ratingHTML =
 		course.rating > 0
 			? `<div>
-				<i data-lucide="star"></i>
+				<i class="size-5 text-yellow-400 fill-yellow-400" data-lucide="star"></i>
 				<span>${course.rating}</span>
 			</div>`
 			: '';
@@ -19,7 +20,7 @@ function createCourseCard(course) {
 	const durationHTML =
 		course.duration !== 'Coming Soon'
 			? `<div>
-				<i data-lucide="clock"></i>
+				<i class="size-4" data-lucide="clock"></i>
 				<span>${course.duration}</span>
 			</div>`
 			: '';
@@ -28,7 +29,7 @@ function createCourseCard(course) {
 	const learnersHTML =
 		course.numberOfLearners !== '0'
 			? `<div>
-				<i data-lucide="users"></i>
+				<i class="size-4" data-lucide="users"></i>
 				<span>${course.numberOfLearners} learners</span>
 			</div>`
 			: '';
@@ -82,9 +83,9 @@ function renderCourses(coursesToRender = courses) {
 	});
 
 	// Reinitialize Lucide icons for the new elements
-	if (window.lucide) {
-		window.lucide.createIcons();
-	}
+	createIcons({
+		icons: iconsConfig,
+	});
 }
 
 // Search functionality

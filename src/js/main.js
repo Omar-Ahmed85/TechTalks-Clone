@@ -2,6 +2,43 @@ import './lucide.js';
 import './splide-init.js';
 import './courses-init.js';
 
+// ===== Mobile Menu Toggle =====
+const initMobileMenu = () => {
+	const menuButton = document.getElementById('menu-button');
+	const mobileMenu = document.getElementById('mobile-menu');
+
+	if (!menuButton || !mobileMenu) {
+		console.warn('Mobile menu elements not found');
+		return;
+	}
+
+	// Toggle menu visibility when button is clicked
+	menuButton.addEventListener('click', () => {
+		const isHidden = mobileMenu.classList.contains('hidden');
+
+		if (isHidden) {
+			mobileMenu.classList.remove('hidden');
+		} else {
+			mobileMenu.classList.add('hidden');
+		}
+	});
+
+	// Close menu when clicking on navigation links
+	const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+	mobileMenuLinks.forEach((link) => {
+		link.addEventListener('click', () => {
+			mobileMenu.classList.add('hidden');
+		});
+	});
+};
+
+// Initialize mobile menu when DOM is ready
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', initMobileMenu);
+} else {
+	initMobileMenu();
+}
+
 // ===== Scroll Animations =====
 // Initialize Intersection Observer for scroll animations
 const initScrollAnimations = () => {
