@@ -68,6 +68,7 @@ const initScrollAnimations = () => {
 		// Check if section has centered content (avoid horizontal translations for these)
 		const isCentered =
 			section.classList.contains('items-center') ||
+			section.classList.contains('courses-section') ||
 			section.querySelector('.text-center') !== null;
 
 		// Add varied translation direction
