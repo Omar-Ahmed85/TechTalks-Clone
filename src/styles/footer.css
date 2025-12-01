@@ -22,7 +22,7 @@ footer > div > div:first-child > div:first-child > a > img {
 }
 
 footer > div > div:first-child > div:first-child > a > h2 {
-	@apply text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-cyan-400;
+	@apply text-2xl italic font-bold text-white;
 }
 
 footer > div > div:first-child > div:first-child > p {
